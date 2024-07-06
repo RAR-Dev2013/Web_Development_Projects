@@ -11,7 +11,7 @@ let toDoList = ["new"];
 //While loop
 while(true) {
     //First prompt
-    let msg = prompt("Welcome to your todo list: new adds to arraylist. list shows all to do's in list. delete will delete a specific to do. quit will end the program");
+    let msg = prompt("Welcome to your todo list, instructions below:\n new adds to arraylist.\n list shows all to do's in list.\n delete will delete a specific to do.\n quit will end the program");
 
     if (msg === "new") {
         //Adds new item to the ToDoList

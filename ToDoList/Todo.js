@@ -22,6 +22,7 @@ while(true) {
         //Shows all to do's in list
         for (let toDo of toDoList) {
             console.log(toDo);
+            continue;
         }
 
     } else if (msg === "delete") {

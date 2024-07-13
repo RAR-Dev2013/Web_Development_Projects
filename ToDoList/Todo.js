@@ -1,7 +1,6 @@
 //TO DO LIST//
-//Can we add functions?
 //Clean up prompt message
-//Add a try catch around delete
+
 
 
 let counter = 0;
@@ -11,21 +10,21 @@ let toDoList = ["new"];
 //While loop
 while(true) {
     //First prompt
-    let msg = prompt("Welcome to your todo list, instructions below:\n new adds to arraylist.\n list shows all to do's in list.\n delete will delete a specific to do.\n quit will end the program");
+    let msg = prompt("Welcome to your todo list, instructions below:\n \"new\" adds to arraylist.\n \"list\" shows all to do's in list.\n \"delete\" will delete a specific to do.\n \"quit\" will end the program");
 
-    if (msg === "new") {
+    if (msg.toLowerCase() === "new") {
         //Adds new item to the ToDoList
         let newToDo = prompt("Add your To Do list item.")
         toDoList.push(newToDo); 
 
-    } else if (msg === "list") {
+    } else if (msg.toLowerCase() === "list") {
         //Shows all to do's in list
         for (let toDo of toDoList) {
             console.log(toDo);
             continue;
         }
 
-    } else if (msg === "delete") {
+    } else if (msg.toLowerCase() === "delete") {
         //removes specific todo from arraybased on text
         let deleteToDo = prompt("Enter the to-do item that you want deleted.")
 
@@ -49,7 +48,7 @@ while(true) {
         }
         break;
         
-    } else if (msg === "quit") {
+    } else if (msg.toLowerCase() === "quit") {
         let confirmation = prompt("Are you sure you want to quit this game? Y or N")
         if (confirmation === 'y') {
             break;
@@ -60,5 +59,8 @@ while(true) {
         }
 
 
+    } else {
+        alert("You have not added a correct instruction.");
+        continue;
     }
 }
